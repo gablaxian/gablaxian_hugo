@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+    <div class="Experiments">
+        {{ range $i, $r := .Site.Data.experiments }}
+        <article class="Experiment">
+            <header class="Experiment-header">
+                <a href="/experiments/{{ $r.slug }}">
+                    <h2>{{ $r.name }}</h2>
+                    <img src="/img/experiments/{{ $r.image }}.png" />
+                </a>
+            </header>
+        </article>
+        {{ end }}
+    </div>
+
+{{ end }}

@@ -1,0 +1,19 @@
+- name: Aerofighters
+  slug: aerofighters
+  image: experiments-aerofighters
+
+- name: Editor
+  slug: editor
+  image: experiments-editor
+
+- name: Geometry Wars
+  slug: geometry-wars
+  image: experiments-geometry-wars
+
+- name: Super JS Adventure
+  slug: super-js-adventure/0.10
+  image: experiments-super-js-adventure
+
+- name: Turtles
+  slug: turtles-in-time
+  image: experiments-turtles

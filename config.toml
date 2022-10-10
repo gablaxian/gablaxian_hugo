@@ -1,0 +1,13 @@
+baseURL = 'https://gablaxian.com/'
+languageCode = 'en-gb'
+title = 'gablaxian.com'
+
+[frontmatter]
+  date = [':filename', ':default']
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

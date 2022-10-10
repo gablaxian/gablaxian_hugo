@@ -1,0 +1,163 @@
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/** General Styles **/
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    border-top: 2px solid #00d1c1;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: $primary-font;
+    line-height: #{(24/16)};
+    margin: 0 auto;
+    max-width: px2em(720px);
+    padding: 0 1rem 1rem 1rem;
+    position: relative;
+}
+
+@media only screen and (min-width: px2em(360px)) {
+    body {
+        font-size: 100%;
+        padding: 0 1.5rem;
+    }
+}
+@media only screen and (min-width: px2em(630px)) {
+    body {
+        padding: 0 2rem;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina-specific stuff here */
+    body {
+        font-weight: 300;
+    }
+    h2 {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+main {
+    min-height: 30vh;
+}
+
+h2 {
+    font-family: $secondary-font;
+    font-size: calc(28/16)rem;
+    font-weight: 700;
+    line-height: calc(18/16);
+    text-shadow: 0 1px 0 #fff, 1px 2px 0 #BDBDBD;
+    text-transform: uppercase;
+}
+
+a {
+    color: #008393;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+a:hover {
+    color: #044D56;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+article {
+    header {
+        h2 {
+            line-height: 1;
+        }
+    }
+    time {
+        color: #999;
+        font-size: calc(14/16)rem;
+    }
+}
+
+abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+.Entry + .Entry {
+    margin-top: 2rem;
+
+    &:before {
+        background-color: #ccc;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 0 auto 2rem auto;
+        width: 45%;
+    }
+}
+
+.Entry-header {
+    a {
+        display: block;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.PageContent {
+    margin-top: 4rem;
+}
+
+.NotThatYouCare {
+    border-top: 1px solid #999;
+    color: #444;
+    margin-top: 2rem;
+
+    li {
+        font-size: px2rem(13px);
+    }
+
+    span {
+        font-style: italic;
+    }
+}
+
+@media only screen and (min-width: px2em(630px)) {
+    .NotThatYouCare {
+        margin-top: 0;
+
+        ul {
+            padding-left: 1rem;
+        }
+    }
+
+    .Experiments {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+.PageFooter {
+    border-top: 1px solid #999;
+    color: #666;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.PageFooter-content {
+  font-size: px2rem(14px);
+
+  p {
+      margin-top: px2rem(8px);
+  }
+}

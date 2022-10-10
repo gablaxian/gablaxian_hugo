@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Graham Smith">
+    <meta name="theme-color" content="#2c1881">
+
+    <link rel="home" href="{{ .Site.BaseURL }}">
+    <link rel="icon" href="/favicon.png" size="32x32" type="image/png">
+    <!-- <link rel="alternate" href="/rss.xml" type="application/rss+xml" title="gablaxian"> -->
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="preload" as="font" href="/fonts/04b_03-webfont.woff" crossorigin>
+    <link rel="preload" as="image" href="/img/coin-animation.png">
+
+    {{ $style := resources.Get "sass/build.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    <style media="screen">
+        @font-face {
+            font-family: '04b03regular';
+            src: url('/fonts/04b_03-webfont.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: fallback;
+        }
+    </style>
+
+    <!-- Standard SEO -->
+    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <link rel="alternate" href="{{ .Site.BaseURL }}" hreflang="x-default">
+
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    <meta name="keywords"
+        content="gablaxian, web development, web developer, front end, HTML, CSS, javascript, canvas, brighton">
+
+    <!-- Dublin Core basic info -->
+    <meta name="dcterms.Identifier" content="{{ .Site.BaseURL }}">
+    <meta name="dcterms.Format" content="text/html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gablaxian">
+    <meta name="twitter:title" content="{{ .Params.Title }}">
+    <meta name="twitter:description" content="{{if .IsPage}}{{ .Summary }}{{ else }}Home of one gablaxian{{ end }}">
+    <!--
+
+        Hello. I see you there.
+
+    -->
+</head>
+
+<body>
+
+    <div class="Masthead">
+        <header class="PageHeader" role="banner">
+            <a href="/">
+                <h1>gablaxian.com</h1>
+            </a>
+        </header>
+
+        <nav class="PrimaryNavigation" role="navigation">
+            <ul>
+                <li>
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="/articles/">Series</a>
+                </li>
+                <li>
+                    <a href="/experiments/">Experiments</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="PageContent" role="main">
+
+        {{ block "main" . }}{{ end }}
+
+    </main>
+
+    <footer class="PageFooter">
+
+        <div class="PageFooter-content">
+
+            <p>
+                Software engineer now living in London and working for <a href="https://snyk.io">Snyk</a>.<br>
+                Ex-<a href="https://clearleft.com">Clearleft</a>.
+            </p>
+            <p>I write about the Web, tech &amp; games. That’s about it.</p>
+            <p>Definitely <em>not</em> a designer.</p>
+
+            <ul>
+                <li><a href="https://twitter.com/gablaxian" class="twitter">twitter</a></li>
+                <li><a href="https://github.com/gablaxian" class="github ir">github</a></li>
+                <li><a href="/rss.xml" class="rss">rss</a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="Grid Grid--two-thirds">
+  <section class="Entries">
+    {{ range first 5 .Site.RegularPages }}
+    <article class="Entry">
+
+      <header class="Entry-header">
+        <a href="{{ .RelPermalink }}">
+          <h2>{{ .Title }}</h2>
+        </a>
+
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2 Jan 2006" }}</time>
+      </header>
+
+      <div>
+        <p>{{ .Summary }}</p>
+      </div>
+
+    </article>
+    {{ end }}
+  </section>
+
+  <aside class="NotThatYouCare">
+    <h3>Currently Playing</h3>
+
+    <ul>
+      {{ range $i, $r := getCSV "," "./playing.csv" }}
+        {{ if gt $i 0 }}
+        <li class="{{ index $r 1 }}">{{ index $r 0 }} <span>({{ index $r 1 }})</span></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    <h3>Recently Completed</h3>
+    <ul>
+      {{ range $i, $r := getCSV "," "./completed.csv" }}
+        {{ if gt $i 0 }}
+        <li class="{{ index $r 1 }}">{{ index $r 0 }} <span>({{ index $r 1 }})</span></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    <h3>Gaming Networks</h3>
+
+    <ul>
+        <li><a href="http://steamcommunity.com/id/gablaxian" rel="noopener noreferrer" target="_blank">Steam</a></li>
+        <li><a href="https://www.xboxgamertag.com/search/gablaxian/" rel="noopener noreferrer" target="_blank">Xbox Live</a></li>
+        <li><a href="https://eu.battle.net/d3/en/profile/gablaxian-2624/hero/50250088" rel="noopener noreferrer" target="_blank">Battle.net - gablaxian#2624</a></li>
+        <li><a href="https://my.playstation.com/gablaxian" rel="noopener noreferrer" target="_blank">PSN</a></li>
+    </ul>
+  </aside>
+
+</div>
+{{ end }}

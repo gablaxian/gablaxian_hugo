@@ -1,0 +1,39 @@
+{{ define "main" }}
+    <div>
+
+        <article>
+            {{ if .Title }}
+            <header>
+                <h2>{{ .Title }}</h2>
+            </header>
+            {{ end }}
+
+            <div class="Prose">
+              {{ .Content }}
+            </div>
+        </article>
+
+        <aside>
+            <nav>
+                <ul>
+                    {{ range (where site.RegularPages "Section" "articles").Reverse }}
+                    <li>                      
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                    {{ end }}
+                    <!--
+                        Possible next steps:
+
+                    <li>Movement, Collision & Physics</li>
+                    <li>Enemies & AI</li>
+                    <li>GUI</li>
+                    <li>Sound</li>
+                    <li>Performance, Analysis & Debugging</li>
+                    <li>Wrapping Up</li>
+                    -->
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+{{ end }}

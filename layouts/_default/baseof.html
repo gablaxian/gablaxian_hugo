@@ -18,7 +18,7 @@
     <link rel="preload" as="image" href="/img/coin-animation.png">
 
     {{ $style := resources.Get "sass/build.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
     <style media="screen">
         @font-face {
@@ -36,7 +36,7 @@
 
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="description"
-        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+        content="{{if .IsPage}}{{ .Summary }}{{ else }}Home of one gablaxian{{ end }}">
     <meta name="keywords"
         content="gablaxian, web development, web developer, front end, HTML, CSS, javascript, canvas, brighton">
 

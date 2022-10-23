@@ -34,7 +34,7 @@
     <h3>Recently Completed</h3>
     <ul>
       {{ range $i, $r := getCSV "," "./completed.csv" }}
-        {{ if gt $i 0 }}
+        {{ if (and (gt $i 0) (lt $i 15)) }}
         <li class="{{ index $r 1 }}">{{ index $r 0 }} <span>({{ index $r 1 }})</span></li>
         {{ end }}
       {{ end }}

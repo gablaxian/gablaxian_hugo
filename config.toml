@@ -11,3 +11,8 @@ title = 'gablaxian.com'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "rss"

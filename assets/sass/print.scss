@@ -1,6 +1,7 @@
 
 @media print {
-    .Page-masthead { display: none }
+    html { border-top: none }
+    .Masthead, .PageFooter { display: none }
     * {
         background: transparent !important;
         color: #000 !important; /* Black prints faster: h5bp.com/s */

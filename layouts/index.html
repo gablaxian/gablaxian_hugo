@@ -22,23 +22,40 @@
 
   <aside class="NotThatYouCare">
     <h3>Currently Playing</h3>
+{{ $data := slice }}
+{{ $file := "data/playing.csv" }}
+{{ with or (.Resources.Get $file) (resources.Get $file) }}
+  {{ $opts := dict "targetType" "map" }}
+  {{ $data = transform.Unmarshal $opts . }}
+{{ end }}
 
+{{ with $data }}
     <ul>
-      {{ range $i, $r := getCSV "," "./playing.csv" }}
-        {{ if gt $i 0 }}
-        <li class="{{ index $r 1 }}">{{ index $r 0 }} <span>({{ index $r 1 }})</span></li>
-        {{ end }}
+      {{ range . }}
+        <li class="{{ .system }}">{{ .title }} <span>({{ .system }})</span></li>
       {{ end }}
     </ul>
+{{ end }}
 
     <h3>Recently Completed</h3>
-    <ul>
-      {{ range $i, $r := getCSV "," "./completed.csv" }}
-        {{ if (and (gt $i 0) (lt $i 15)) }}
-        <li class="{{ index $r 1 }}">{{ index $r 0 }} <span>({{ index $r 1 }})</span></li>
+{{ $data = slice }}
+{{ $file = "data/completed.csv" }}
+{{ with or (.Resources.Get $file) (resources.Get $file) }}
+  {{ $opts := dict "targetType" "map" }}
+  {{ $data = transform.Unmarshal $opts . }}
+{{ end }}
+
+{{ with $data }}
+      <ul>
+        {{ $count := 0 }}
+        {{ range . }}
+          {{ if lt $count 10 }}
+        <li class="{{ .system }}">{{ .title }} <span>({{ .system }})</span></li>
+          {{ end }}
+          {{ $count = add $count 1 }}
         {{ end }}
-      {{ end }}
-    </ul>
+      </ul>
+{{ end }}
 
     <h3>Gaming Networks</h3>
 

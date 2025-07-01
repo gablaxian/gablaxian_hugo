@@ -17,7 +17,7 @@
     <link rel="preload" as="font" href="/fonts/04b_03-webfont.woff" crossorigin>
     <link rel="preload" as="image" href="/img/coin-animation.png">
 
-    {{ $style := resources.Get "sass/build.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{ $style := resources.Get "sass/build.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
     <style media="screen">

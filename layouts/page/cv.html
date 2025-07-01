@@ -1,36 +1,60 @@
 {{ define "main" }}
     <div class="CV">
 
-        <h2>CV</h2>
-
         <div class="CV-Details">
-            <div>
-                <span>Name</span>
+            <div class="CV-Details-Name">
                 <span>Graham Smith</span>
             </div>
-            <div>
-                <span>D.O.B</span>
-                <span>5th November 1982</span>
-            </div>
-            <div>
-                <span>Email</span>
-                <span>g@blaxian.com</span>
+            <div class="CV-Details-Links">
+                <span><a href="mailto:g@blaxian.com">g@blaxian.com</a></span>
+                <span><a href="https://www.linkedin.com/in/gablaxian/">linkedin.com/in/gablaxian</a></span>
             </div>
         </div>
 
         <section>
-            <h3>Employment History</h3>
+            <h3>Professional Profile</h3>
+
+            <p>
+                A Developer and Software Engineer with over 20 years of industry experience building websites and services for a variety of customers and employers. Most recently
+                I have been working in the cybersecurity space as a platform engineer to enable both external customers to build on top of our platform, but also internal customers
+                to be more effective.
+            </p>
+        </section>
+
+        <section>
+            <h3 class="CV-Section-header">Experience</h3>
 
             <div class="Employment">
-                <div class="Employment-dates">
-                    <time>October 2023</time> <span class="arr">→</span> <time>Current day</time>
-                </div>
-                <div class="Employment-position">Engineering Manager at <a href="https://snyk.io">Snyk</a></div>
                 
+                <div class="Employment-position">Senior Software Engineer at <a href="https://snyk.io">Snyk</a></div>
+                <div class="Employment-dates">
+                    <time>Apr 2025</time> <span class="arr">→</span> <time>Jun 2025</time>
+                </div>
+
                 <div class="Employment-details">
-                    <p>Led the team responsible for the API Program and Webhooks products. I managed between 3-7 engineers and was responsible for helping hire and onboard engineers, and played a role in selecting and mentoring an intern on their trajectory to an associate engineer full-time role.</p>
                     <p>
-                        Transitioned to lead a new team who were, initially, responsible for Snyk Apps and Partner Integrations but then took on more ownerships to become Team Extensibility, where we owned and delivered solutions to enable customers and partners to build on the Snyk Platform, such as:
+                        Moved back to an IC role to lead a new Platform Enablement team to foster a more customer-centric Platform product. I wrote standards and
+                        strategies for Division-wide enablement to lower the friction for releasing new or updated features to the rest of the org, as well as planning
+                        and executing a feature rollout to the rest of the org with zero disruption.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Employment">
+                
+                <div class="Employment-position">Engineering Manager at <a href="https://snyk.io">Snyk</a></div>
+                <div class="Employment-dates">
+                    <time>February 2022</time> <span class="arr">→</span> <time>Apr 2025</time>
+                </div>
+
+                <div class="Employment-details">
+                    <p>
+                        Promoted to manager of my existing team who were responsible for the API Program and Webhooks products. I managed between 3-7 engineers and was
+                        responsible for helping hire and onboard engineers, and played a role in selecting and mentoring an intern on their trajectory to an associate engineer full-time role.
+                    </p>
+                    <p>
+                        Transitioned to lead a new team who were, initially, responsible for Snyk Apps and Partner Integrations but then took on more ownerships to become Team Extensibility,
+                        where we owned and delivered solutions to enable customers and partners to build on the Snyk Platform, such as:
                         <ul>
                             <li>Snyk Apps</li>
                             <li>Webhooks</li>
@@ -42,123 +66,134 @@
             </div>
 
             <div class="Employment">
+            
+                <div class="Employment-position">Software Engineer at <a href="https://snyk.io">Snyk</a></div>
                 <div class="Employment-dates">
-                    <time>February 2022</time> <span class="arr">→</span> <time>October 2023</time>
+                    <time>16th April 2018</time> <span class="arr">→</span> <time>February 2022</time>
                 </div>
-                <div class="Employment-position">Associate Engineering Manager at <a href="https://snyk.io">Snyk</a></div>
 
                 <div class="Employment-details">
-                    <p>Started at Snyk as employee 37 and watched it grow to over 1500. I joined one of two R&D engineering teams who were in charge of the SaaS app. We were responsible for maintaining the ExpressJS service and building out new features. Notable projects include: Jira Integration, New Project Import flow in Vue.js</p>
+                    <p>
+                        Started as employee 37 and watched Snyk grow to over 1500. I joined one of two R&D engineering teams, ours was in charge of the SaaS app 
+                        where we were responsible for maintaining the ExpressJS service and building out new features.
+                    </p>
                     <p>As the company grew I moved to a team responsible for the Reporting Product, building out a new Reporting UI and improving and maintaining the services and ETL pipelines to the BigQuery-backed datastore.</p>
-                    <p>Moved to the newly formed Extensibility Group created to better enable customers and partners to build on top of the Snyk platform. Team was responsible for the new API Program and Webhooks features. Developed new tools and services to enable teams to build against the new REST API. We also developed a new Webhooks service built on the Event Bus.</p>
+                    <p>
+                        As Snyk scaled further, I moved to a newly formed Extensibility Group created to better enable customers and partners to build on top of the Snyk platform. My team was responsible for the new
+                        API Program and Webhooks features. Developed new tools and services to enable teams to build against the new REST API. We also developed a new Webhooks service built on the Kafka Event Bus.
+                    </p>
+                    <p><span class="key-skills">Key Skills:</span> Node, ExpressJS, PostgreSQL</p>
                 </div>
             </div>
 
             <div class="Employment">
-              <div class="Employment-dates">
-                  <time>16th April 2018</time> <span class="arr">→</span> <time>February 2022</time>
-              </div>
-              <div class="Employment-position">Software Engineer at <a href="https://snyk.io">Snyk</a></div>
 
-              <div class="Employment-details">
-                <p>I started at Snyk as employee 37 and watched it grow to over 1500. I joined one of two R&D engineering teams who were in charge of the SaaS app. We were responsible for maintaining the ExpressJS service and building out new features. Notable projects include: Jira Integration, New Project Import flow in Vue.js</p>
-                <p>As the company grew I moved to a team who was responsible for the Reporting Product, building out a new Reporting UI and improving and maintaining the services and ETL pipelines to the BigQuery-backed datastore.</p>
-                <p>From there I moved to a new team and Group who were responsible for the Extensibility of the Snyk platform where we rolled out a new API Program, developing new tools to enable teams to build against the new REST API. We also owned the Webhooks feature and developed a Streaming Webhooks service on the Apache Kafka Event Bus.</p>
-              </div>
-            </div>
-
-            <div class="Employment">
+                <div class="Employment-position">Senior Front-end Web Developer at <a href="https://clearleft.com">Clearleft</a></div>
                 <div class="Employment-dates">
                     <time>18th September 2013</time> <span class="arr">→</span> <time>1st February 2018</time>
                 </div>
-                <div class="Employment-position">Senior Front-end Web Developer at <a href="https://clearleft.com">Clearleft</a></div>
 
                 <div class="Employment-details">
-                    <p>Responsibilities included building pattern portfolios for clients, developing internal CMS-driven sites built on Craft 2&3 for Clearleft itself and also their events, e.g. dConstruct, UX London, Ampersand and Leading Design. Separate to building sites, Myself along with the other developers setup and maintained Digital Ocean droplets for hosting our sites and projects along with building and maintaining a custom PHP system called Elf which managed a local development environment using Vagrant, VirtualBox and Ubuntu 16.04 and deployments onto our droplets.</p>
-                    <p>Through Clearleft I worked with such clients as: eLife, Penguin Random House, Wellcome Collection</p>
-                    <p>Notable projects:
-                        <ul>
-                            <li><a href="https://elifesciences.org/" target="_blank" rel="noopener noreferrer">eLife</a></li>
-                            <li><a href="http://fractal.clearleft.com" target="_blank" rel="noopener noreferrer">Clearleft Fractal</a></li>
-                            <li><a href="https://2015.dconstruct.org" target="_blank" rel="noopener noreferrer">dConstruct 2015</a></li>
-                            <li><a href="http://elf.clearleft.com" target="_blank" rel="noopener noreferrer">Elf</a></li>
-                        </ul>
+                    <p>
+                        Responsibilities included building pattern portfolios for clients, developing internal CMS-driven sites built
+                        on <a href="https://craftcms.com/" target="_blank" rel="noopener noreferrer">Craft CMS</a> 2&3 for Clearleft itself and also their events,
+                        e.g. dConstruct, UX London, Ampersand and Leading Design. Separate to building sites, Myself along with the other developers setup and
+                        maintained Digital Ocean droplets for hosting our sites and projects along with building and maintaining a custom PHP system called Elf which
+                        managed a local development environment using Vagrant, VirtualBox and Ubuntu 16.04 and deployments onto our droplets.
                     </p>
+                    <p>Through Clearleft I worked with such clients as: eLife, Penguin Random House, Wellcome Collection</p>
+                    <p><span class="key-skills">Key Skills:</span> PHP, JavaScript, Vagrant, nginx,, progressive web design, UX, Pattern Libraries</p>
                 </div>
             </div>
 
             <div class="Employment">
+
+                <div class="Employment-position">Freelance Web Developer</div>
                 <div class="Employment-dates">
                     <time>1st March 2010</time> <span class="arr">→</span> <time>18th September 2013</time>
                 </div>
-                <div class="Employment-position">Freelance Web Developer</div>
 
                 <div class="Employment-details">
-                    <p>During this period I worked in a freelance capacity for anyone who needed an extra pair of hands for their projects. During this time I worked with technologies such as PHP, Python, Ruby, JavaScript (including Canvas), CSS and HTML using frameworks like Wordpress, ExpressionEngine, Laravel, Magento, Joomla, Django, Ruby on Rails, jQuery and require.js</p>
-                    <p>Notable projects:
-                        <ul>
-                            <li><a href="http://www.kestrelbeer.com" target="_blank" rel="noopener noreferrer">Kestrel</a></li>
-                            <li><a href="http://pulseagency.co.uk/" target="_blank" rel="noopener noreferrer">Pulse</a></li>
-                        </ul>
+                    <p>
+                        During this period I worked in a freelance capacity for anyone who needed an extra pair of hands for their projects. During this time I worked
+                        with technologies such as PHP, Python, Ruby, JavaScript (including Canvas), CSS and HTML using frameworks such as:
+                        Wordpress, ExpressionEngine, Laravel, Magento, Joomla, Django, Ruby on Rails, jQuery and require.js
                     </p>
                 </div>
             </div>
 
             <div class="Employment">
-                <div class="Employment-dates">
-                    <time>16th August 2007</time> <span class="arr">→</span> <time>26th February 2010</time>
-                </div>
+                
                 <div class="Employment-position">
                     Web Developer at <a href="http://smrs.co.uk/" target="_blank" rel="noopener noreferrer">SMRS</a>
                 </div>
+                <div class="Employment-dates">
+                    <time>16th August 2007</time> <span class="arr">→</span> <time>26th February 2010</time>
+                </div>
 
                 <div class="Employment-details">
-                    <p>My work here covered a wide variety of roles. I started by building an internal Scheduling system to help manage the time of people in the Studio while pumping out Ad banners and HTML emailers for clients. Eventually I moved on to join the rest of the small web team in building recruitment systems for clients for the processing of job applications and CVs and their hosting requirements. Through SMRS, I’ve done work for clients such as Sky, Next, Chubb Security, HDNL and Skipton Building Society. Aside from the Admin sections of the websites, I didn’t often get involved in the design side of the websites, and instead focused on building the layout into a framework to implement forms, databases, front-end interactivity and other dynamic aspects. I took Photoshop page designs and built them from scratch, using progressive enhancement to cater for the less capable browsers. My systems were typically built in Ruby on Rails, PHP and MySQL, HTML, CSS1-3 and JQuery. The larger projects were versioned using SVN on Beanstalk, or locally using Git.</p>
+                    <p>
+                        My work here covered a wide variety of roles. I started by building an internal scheduling system to help manage the time of people in the Studio while pumping out Ad banners and HTML emailers for clients.
+                        Eventually I moved on to join the rest of the small web team in building recruitment systems for clients for the processing of job applications and CVs and their hosting requirements.
+                        Through SMRS, I’ve delivered work for clients such as Sky, Next, Chubb Security, HDNL and Skipton Building Society. Systems were typically built in Ruby on Rails, PHP and MySQL, HTML, CSS1-3 and JQuery.
+                        The larger projects were versioned using SVN on Beanstalk, or locally using Git.
+                    </p>
                     <p>Web sites I’ve helped develop: joinourwebteam.sky.com, chubbsalescareers.com, skiptoncareers.com, deliver.hdnlcareers.co.uk, hmlcareers.com</p>
-                    <p>Key Skills: Ruby on Rails, PHP 5, MySQL 4&amp;5, CakePHP, CodeIgniter, Apache HTTP server, HTML4/5, CSS1-3, Javascript &amp; JQuery, XML, Photoshop.</p>
+                    <p><span class="key-skills">Key Skills:</span> Ruby on Rails, PHP 5, MySQL 4&amp;5, CakePHP, CodeIgniter, Apache HTTP server, HTML4/5, CSS1-3, Javascript &amp; JQuery, XML, Photoshop.</p>
                     <p>Other Skills: SVN, Git, Basic Flash &amp; Actionscript 3, SQLite 3, Linux &amp; Shell Scripting, Configuring &amp; Compiling Apache, PHP and MySQL for local testing environments.</p>
                 </div>
             </div>
 
             <div class="Employment">
+                <div class="Employment-position">
+                    <span>Web Developer at Progressive Recruitment / HNW Journal</span>
+                </div>
                 <div class="Employment-dates">
                     <time>16th August 2004</time> <span class="arr">→</span> <time>16th August 2007</time>
                 </div>
-                <div class="Employment-position">
-                    <span>Web Developer at <a href="http://www.progressiverec.com/" target="_blank" rel="noopener noreferrer">Progressive Recruitment / HNW Journal</a></span>
-                </div>
 
                 <div class="Employment-details">
-                    <p>Initially employed to re-develop Progressive Recruitment&rsquo;s existing website, with the potential to work on a new online based newsletter/magazine, HNW. Soon - with the conversion of the newsletter into a fully-fledged magazine - the roles covered developing both the recruitment company and the magazine&rsquo;s internal systems, administering the Linux Servers, various http servers, MySQL servers, the network and samba server, Advertising Designer, Technical Journalist, Computer technician and Backup Systems.</p>
+                    <p>
+                        Initially employed to re-develop Progressive Recruitment&rsquo;s existing website, with the potential to work on a new online based newsletter/magazine, HNW.
+                        Soon - with the conversion of the newsletter into a fully-fledged magazine - the roles covered developing both the recruitment company and the magazine&rsquo;s internal systems, administering the Linux Servers,
+                        various http servers, MySQL servers, the network and samba server, Advertising Designer, Technical Journalist, Computer technician and Backup Systems.
+                    </p>
                     <p>Web sites developed: www.progressiverec.com, www.hnwjournal.com both in PHP (no longer active). Valid strict XHTML and valid CSS2 along with the internal web-based systems using Ruby on Rails on Fedora based Linux Systems.</p>
-                    <p>Key Skills: PHP 4&amp;5, SQL using MySQL 4&amp;5, Apache 2.0-2.2, Java, JavaScript, XHTML, XML, XSLT, CSS1&amp;2, Ruby, Ruby on Rails 1.2, Lighttpd and Mongrel HTTP servers, Linux Fedora Core 1 &amp; 5, bash shell scripting.</p>
+                    <p><span class="key-skills">Key Skills:</span> PHP 4&amp;5, SQL using MySQL 4&amp;5, Apache 2.0-2.2, Java, JavaScript, XHTML, XML, XSLT, CSS1&amp;2, Ruby, Ruby on Rails 1.2, Lighttpd and Mongrel HTTP servers, Linux Fedora Core 1 &amp; 5, bash shell scripting.</p>
                 </div>
             </div>
 
         </section>
 
         <section>
-            <h3>Education</h3>
-
-            <time>2001 &ndash; 2004</time>
-            <span>UMIST &ndash; Manchester</span>
-            <span>BSC Artificial Intelligence</span>
-
-            <p>Technical modules covered various computer related topics including Systems Architecture, AI, Programming in Java and Prolog, Computer Graphics &amp; Visualization, Neural Networks, Speech Processing, Computer Vision, and Machine Learning.</p>
-            <p>Final Year Project: &lsquo;Conversion of Agent XML messages into SVG&rsquo;. It involved taking XML files and used HTML, JavaScript, Servlets, XSL, XSLT, CSS and SVG to allow a user to choose which agents he/she would like to see the messages between and visualized them appropriately; all in accordance with AgentCities and Fipa specifications.</p>
-
-            <time>1999 &ndash; 2001</time>
-            <span>St. Peter&rsquo;s School, York</span>
-
-            <time>1992 &ndash; 1999</time>
-            <span>British International School of Jeddah, Saudi Arabia</span>
+            <h3>Interests and Hobbies</h3>
+            <p>
+                As well as being a father to a little boy, I have a passion for retro games and own a number of old games consoles, notably of the 16-bit and 64-bit era. I am working my way up to modding them, but have only got
+                as far as guiltily staring at the unused soldering iron. I was also bitten by the coffee bug a year or two ago and spend too much time learning everything I can from James Hoffman, and making espressos
+                or filter coffess with the Aeropress or V60. When I do finally leave the house, I go climbing at my local bouldering gym.
+            </p>
         </section>
 
         <section>
             <h3>Additional Skills</h3>
+            <p>I have advanced skills using Adobe Photoshop, Adobe After Effects and Adobe Premier. I’ve worked on some short videos, one for the <a href="https://vimeo.com/35507448">2011 Build Conference</a>, and a handful of 30s horror shorts for the annual Sheffield Celluloid Screams event.</p>
+            <p>Every so often I use products from some little company called Microsoft. Filthy. But otherwise, I’m a Mac man.</p>
+        </section>
 
-            <p>I have advanced skills using Adobe Photoshop, Adobe After Effects, Adobe Premier, and every so often I use products from some little company called Microsoft. Filthy. But otherwise, I’m a Mac man.</p>
-            <p>I also have a basic grasp of the French and Japanese languages.</p>
+        <section>
+            <h3>Education</h3>
+
+            <div class="Education">
+                <div class="Education-University">
+                    UMIST / Manchester
+                </div>
+                <div class="Employment-dates">
+                    <time>16th August 2004</time> <span class="arr">→</span> <time>16th August 2007</time>
+                </div>
+                <div>
+                    <span>BSc Artificial Intelligence</span>
+                </div>
+            </div>
         </section>
 
     </div>

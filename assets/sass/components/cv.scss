@@ -9,23 +9,23 @@
     }
 }
 
-.CV-Details {
-    span:first-child {
-        display: inline-block;
-        font-size: px2rem(13px);
-        font-weight: 700;
-        text-transform: uppercase;
-        width: px2rem(60px);
-    }
-    span + span {
-        font-size: px2rem(14px);
-    }
+.CV-Header {
+    font-size: px2rem(36px);
 }
-.Employment {
-    time {
 
+.CV-Details-Name {
+    font-size: px2rem(32px);
+    font-weight: 600;
+}
+.CV-Details-Links {
+    margin-top: 0.5rem;
+    a {
+        display: inline-block;
+        font-size: px2rem(14px);
+        margin-right: 1rem;
     }
 }
+
 .Employment + .Employment {
     margin-top: 4rem;
 }
@@ -36,8 +36,14 @@
     text-transform: uppercase;
 }
 .Employment-position {
+    font-size: px2rem(22px);
     font-weight: 500;
 }
 .Employment-details {
+    font-size: px2rem(16px);
+}
+
+.key-skills {
     font-size: px2rem(14px);
+    font-weight: 700;
 }

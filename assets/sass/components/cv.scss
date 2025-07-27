@@ -7,6 +7,9 @@
         border-top: 1px solid #ccc;
         margin-top: 2rem;
     }
+    li {
+        margin-top: 0.5rem;
+    }
 }
 
 .CV-Header {
@@ -26,6 +29,12 @@
     }
 }
 
+.CV-technical-skills {
+    strong {
+        font-weight: 600;
+    }
+}
+
 .Employment + .Employment {
     margin-top: 4rem;
 }
@@ -41,6 +50,10 @@
 }
 .Employment-details {
     font-size: px2rem(16px);
+
+    .team {
+        font-weight: 500;
+    }
 }
 
 .key-skills {
